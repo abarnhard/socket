@@ -1,5 +1,11 @@
+/* global io */
+
 (function(){
   'use strict';
+
+  var socket = io();
+
+  socket.emit('Number 5 is alive', 'Hello World');
 
   angular.module('mean-template', [])
   .controller('MainController', ['$scope', '$interval', function($scope, $interval){
